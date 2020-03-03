@@ -1,6 +1,14 @@
 # vue-ele
 
-`vue create vue-ele`
+`vue create vue-ele`  
+cube-ui [quick-start](https://didi.github.io/cube-ui/#/zh-CN/docs/quick-start)  
+`vue add cube-ui`  
+
+? Use post-compile? `Yes`  
+? Import type `Partly`  
+? Custom theme? `Yes`  
+? Use rem layout? `No`  
+? Use vw layout? (y/N) `No`  
 
 ## Project setup
 ```
