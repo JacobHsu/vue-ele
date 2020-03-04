@@ -10,6 +10,10 @@ cube-ui [quick-start](https://didi.github.io/cube-ui/#/zh-CN/docs/quick-start)
 ? Use rem layout? `No`  
 ? Use vw layout? (y/N) `No`  
 
+[stylus](https://stylus-lang.com/)  
+cube-ui 會安裝 `stylus` `stylus-loader` `Reset CSS`
+mixins vue-ele\node_modules\cube-ui\src\common\mixins
+
 ## Project setup
 ```
 yarn install
