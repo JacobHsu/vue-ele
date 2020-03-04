@@ -14,6 +14,36 @@ cube-ui [quick-start](https://didi.github.io/cube-ui/#/zh-CN/docs/quick-start)
 cube-ui 會安裝 `stylus` `stylus-loader` `Reset CSS`
 mixins vue-ele\node_modules\cube-ui\src\common\mixins
 
+## debug
+
+> @import "~common/stylus/mixin" failed
+
+vue.config.js
+
+`~` 代表當前目錄的根目錄
+common等目錄起別名 `alias`
+
+```js
+const webpack = require('webpack')
+const path = require('path')
+function resolve(dir) {
+  return path.join(__dirname, dir)
+}
+module.exports = {
+  ...
+  chainWebpack(config) {
+    config.resolve.alias
+      .set('components', resolve('src/components'))
+      .set('common', resolve('src/common'))
+      .set('api', resolve('src/api'))
+
+    config.plugin('context')
+      .use(webpack.ContextReplacementPlugin,
+        [/moment[/\\]locale$/, /zh-cn/])
+  },
+}
+```
+
 ## Project setup
 ```
 yarn install

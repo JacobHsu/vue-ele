@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+     <v-header :seller="seller"></v-header>
     <img alt="Vue logo" src="./assets/logo.png">
     <HelloWorld msg="Welcome to Your Vue.js App"/>
   </div>
@@ -7,11 +8,13 @@
 
 <script>
 import HelloWorld from './components/HelloWorld.vue'
+import VHeader from './components/v-header/v-header'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    HelloWorld,
+    VHeader
   }
 }
 </script>
