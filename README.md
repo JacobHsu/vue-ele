@@ -134,3 +134,26 @@ yarn run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+## Deploy
+
+`$ yarn add gh-pages`  
+
+[Command Line Utility](https://www.npmjs.com/package/gh-pages)
+
+package.json
+
+```js
+"homepage": "https://jacobhsu.github.io/vue-ele/",
+"scripts": {
+  "deploy": "yarn build && gh-pages -d dist"
+}
+```
+
+vue.config.js
+
+```js
+module.exports = {
+    publicPath: process.env.NODE_ENV === 'production' ? 'vue-ele' : '/',
+}
+```
