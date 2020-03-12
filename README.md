@@ -103,6 +103,10 @@ vue-ele\data.json
     ...
 ```
 
+prod.server.js  
+`node ./prod.server.js`  
+http://localhost:8900/api/seller
+
 ## Reference
 
 ustbhuangyi/[vue-sell](https://github.com/ustbhuangyi/vue-sell)
