@@ -7,6 +7,8 @@
 </template>
 
 <script>
+import qs from 'query-string'
+import { getSeller } from 'api'
 import HelloWorld from './components/HelloWorld.vue'
 import VHeader from './components/v-header/v-header'
 
@@ -15,7 +17,26 @@ export default {
   components: {
     HelloWorld,
     VHeader
-  }
+  },
+  data() {
+    return {
+      seller: {
+        id: qs.parse(location.search).id
+      }
+    }
+  },
+  created() {
+    this._getSeller()
+  },
+  methods: {
+    _getSeller() {
+      getSeller({
+        id: this.seller.id
+      }).then((seller) => {
+        this.seller = Object.assign({}, this.seller, seller)
+      })
+    }
+  },
 }
 </script>
 

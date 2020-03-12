@@ -44,6 +44,69 @@ module.exports = {
 }
 ```
 
+Error: Failed to load config "@vue/standard" to extend from.
+
+## api
+
+vue.config.js
+
+```js
+  chainWebpack(config) {
+    config.resolve.alias
+      ...
+      .set('api', resolve('src/api'))
+```
+
+src\api\index.js  
+`const getSeller = get('api/seller')`
+
+
+[How to disable eslint on vue-cli 3?](https://stackoverflow.com/questions/49121110/how-to-disable-eslint-on-vue-cli-3)
+
+vue.config.js
+
+```js
+module.exports = {
+    chainWebpack: config => {
+        config.module.rules.delete('eslint');
+    }
+}
+```
+
+chrome / devTools / [Network] / XHR
+http://localhost:8080/api/seller/
+
+vue.config.js
+
+```js
+const appData = require('./data.json')
+const seller = appData.seller
+module.exports = {
+  ...
+  devServer: {
+    before(app) {
+      app.get('/api/seller', function (req, res) {
+        res.json({
+          errno: 0,
+          data: seller
+        })
+      })
+    }
+  },
+```
+
+vue-ele\data.json
+
+```json
+{
+  "seller": {
+    ...
+```
+
+## Reference
+
+ustbhuangyi/[vue-sell](https://github.com/ustbhuangyi/vue-sell)
+
 ## Project setup
 ```
 yarn install
