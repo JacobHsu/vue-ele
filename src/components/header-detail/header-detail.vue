@@ -51,6 +51,16 @@
         }
       }
     },
+    data() {
+      return {
+        visible: false
+      }
+    },
+    methods: {
+      show() {
+        this.visible = true
+      }
+    },
     components: {
       SupportIco,
       Star

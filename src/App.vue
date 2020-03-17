@@ -1,7 +1,6 @@
 <template>
   <div id="app">
      <v-header :seller="seller"></v-header>
-     <header-detail :seller="seller"></header-detail>
     <img alt="Vue logo" src="./assets/logo.png">
     <HelloWorld msg="Welcome to Your Vue.js App"/>
   </div>
@@ -12,14 +11,13 @@ import qs from 'query-string'
 import { getSeller } from 'api'
 import HelloWorld from './components/HelloWorld.vue'
 import VHeader from './components/v-header/v-header'
-import HeaderDetail from './components/header-detail/header-detail'
+
 
 export default {
   name: 'App',
   components: {
     HelloWorld,
-    VHeader,
-    HeaderDetail
+    VHeader
   },
   data() {
     return {

@@ -107,6 +107,10 @@ prod.server.js
 `node ./prod.server.js`  
 http://localhost:8900/api/seller
 
+## Docs
+
+cube-ui [create-api 模块](https://didi.github.io/cube-ui/#/zh-CN/docs/create-api)
+
 ## Reference
 
 ustbhuangyi/[vue-sell](https://github.com/ustbhuangyi/vue-sell)
