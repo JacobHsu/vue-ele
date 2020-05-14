@@ -2,10 +2,11 @@ import axios from 'axios'
 
 // http://localhost:8080/api/seller/ data.json vue.config.js
 // http://ustbhuangyi.com/sell/api/seller
+// https://vue-ele-server.herokuapp.com/api/seller
 // https://jacobhsu.github.io/vue-ele/
 const urlMap = {
   development: '/',
-  production: 'https://jacobhsu.github.io/vue-ele/' //'http://ustbhuangyi.com/sell/'
+  production: 'https://vue-ele-server.herokuapp.com/' //'http://ustbhuangyi.com/sell/'
 }
 const baseUrl = urlMap[process.env.NODE_ENV]
 const ERR_OK = 0

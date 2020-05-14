@@ -103,6 +103,8 @@ vue-ele\data.json
     ...
 ```
 
+production node express
+
 prod.server.js  
 `node ./prod.server.js`  
 http://localhost:8900/api/seller
@@ -162,6 +164,10 @@ vue.config.js
 
 ```js
 module.exports = {
-    publicPath: process.env.NODE_ENV === 'production' ? 'vue-ele' : '/',
+    publicPath: process.env.NODE_ENV === 'production' ? '/vue-ele' : '/',
 }
 ```
+
+## Reference
+
+[Vue.js 高仿饿了么外卖 App](https://github.com/ustbhuangyi/vue-sell)
